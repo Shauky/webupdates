@@ -17,7 +17,7 @@ Engineering tasks
 Goal: Easy to manipulate Angular based tourism content feed
 
 Todo:
-	* study grep and implement it on visitmaldives.com
+	* study grep and implement it on visitmaldives, condenast, tripavisor
 
 Notes:
 	- Nodeunit default reporter has an issue in Windows

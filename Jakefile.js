@@ -22,9 +22,12 @@
 
 	desc("Test everything");
 	task("test", [], function(){
-		var reporter = require("nodeunit").reporters.default;
-		reporter.run(['/']);
-	});
+		var reporter = require("nodeunit").reporters["default"];
+		reporter.run(['src/server/_server_test.js'], null, function(failures){
+			console.log("Tests done");   // add with server running later
+			complete();
+		});
+	}, {async: true});
 
 
 	function nodeLintOptions(){
