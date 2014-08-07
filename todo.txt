@@ -7,7 +7,6 @@ User Stories
 	+ homepage design
 
 Engineering tasks
-	* Implement node unit and git integration branches
 	+ Implement grep for getting files
 	- Implement Casper for scraping
 	- test write to Json
