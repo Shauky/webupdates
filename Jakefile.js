@@ -1,10 +1,20 @@
 /*global desc, task, jake, fail, complete */
-
 (function() {
-
+	
 	"use strict";
 
-	task('default', ["lint","test"]);
+	task('default', ["lint","test", "ghost"]);
+	
+	//Casper smoke tests
+
+	desc("Casper smoke test");
+	task("ghost", [], function(){
+		var ghost = require("./src/smoke_test.js");
+		console.log("Casper starts phantom!");
+		ghost.ghostFunc();
+	}, {async: true});
+
+	//JSHint
 
 	desc("Lints eveything");
 	task("lint", [], function(){
@@ -18,13 +28,15 @@
 		var pass = lint.validateFileList(files.toArray(), options, globals);
 				if (!pass) fail("Lint failed");
 
-	});
+	},{async: true});
+
+	//nodeunit
 
 	desc("Test everything");
 	task("test", [], function(){
 		var reporter = require("nodeunit").reporters["default"];
 		reporter.run(['src/server/_server_test.js'], null, function(failures){
-			console.log("Tests done");   // add with server running later
+			console.log("All tests done");   // add with server running?
 			complete();
 		});
 	}, {async: true});

@@ -1,14 +1,15 @@
 Webupdates
 
 Minimum features
-	+ home page (crawls the web for tourism related content and presents them in a useful fashion)
+	+ home page (crawls the web for tourism related content 
+	and presents them in a useful fashion)
 
 User Stories
 	+ homepage design
 
 Engineering tasks
-	+ Implement grep for getting files
-	- Implement Casper for scraping
+	- Modify build to enforce node
+	- Implement Casper for scraping       <========
 	- test write to Json
 	- test Read from Json array
 	- Format with Angular (index.html/data)
@@ -17,7 +18,8 @@ Engineering tasks
 Goal: Easy to manipulate Angular based tourism content feed
 
 Todo:
-	* study grep and implement it on visitmaldives, condenast, tripavisor
+	* study Casper and implement it on visitmaldives, condenast, 
+	tripavisor
 
 Notes:
 	- Nodeunit default reporter has an issue in Windows

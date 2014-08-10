@@ -1,43 +1,28 @@
-//Main Server and Webupdates for Maldives Traveller
-
-//server starts and immediately begins collecting data
-//using PhantomJs and Casper
+//Main Server Webupdates for Maldives Traveller
 
 "use strict";
+
+var fs = require("fs");
 var http = require("http");
 var server;
 
-
-
-//PhantomCode (grep, wget, json, casper)
-
-
-
-
-
-
-
-
-
-
 // Server Code
+
 exports.start = function(portNumber){
+	if (!portNumber) throw "Required port number for webserver";
+	portNumber = 8080;
+
 	server = http.createServer();
 
 	server.on("request", function(req, res){
 		console.log("Received Request");
-
-		var body = "<html><head><title>A Simple Node Server for Web Updates.</title></head>" +
-				"<body> This is a spike for a basic web server in node." + 
-				"follow up on with tdjs13.mp4 </body></html>";
-
-		res.end(body);
+		res.end("Hello World");
 	});
 	server.listen(portNumber);
-	console.log("server started");
+	console.log("Server listening on: " + portNumber);
 };
-
 
 exports.stop = function(callback) {
 	server.close(callback);
+	console.log("Server Stopped");
 };
