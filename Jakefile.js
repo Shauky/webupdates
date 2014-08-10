@@ -1,4 +1,5 @@
 /*global desc, task, jake, fail, complete */
+
 (function() {
 	
 	"use strict";
@@ -28,7 +29,7 @@
 		var pass = lint.validateFileList(files.toArray(), options, globals);
 				if (!pass) fail("Lint failed");
 
-	},{async: true});
+	});
 
 	//nodeunit
 

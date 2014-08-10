@@ -20,5 +20,5 @@ exports.ghostFunc = function(){
 				console.log("Child process completes!");
 			}	
 		});
-	}, {async:true};
+	};
 }());
