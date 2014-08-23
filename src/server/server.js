@@ -1,4 +1,4 @@
-//Main Server Webupdates for Maldives Traveller
+//Main Server for testing
 
 "use strict";
 
@@ -9,7 +9,7 @@ var server;
 // Server Code
 
 exports.start = function(portNumber){
-	if (!portNumber) throw "Required port number for webserver";
+	if (!portNumber) throw("Required port number for webserver");
 	portNumber = 8080;
 
 	server = http.createServer();

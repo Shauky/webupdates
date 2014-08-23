@@ -1,21 +1,34 @@
 Webupdates
 
 Minimum features
-	+ home page (crawls the web for tourism related content 
-	and presents them in a useful fashion)
+	
+	+ home page(marketing) presents ability to Search packages and workout prices for products easily
+	
+	+ manager page
+		- crawls the web for tourism related content 
+	and presents them in a useful fashion, in the back-end. 
+	
+	- presents up to date info
 
 User Stories
-	+ homepage design
+	
+	*serve a single file home page   <==================
+		- 404 errors
+		- Marketing copy (divendive first?)
+		- deploy
+		- marketing copy
+		- Publish on internet
 
-Engineering tasks
-	- Modify build to enforce node
-	- Implement Casper for scraping       <========
+Engineering 	
+	* serve single file
+	- Implement Casper for scraping   <========
 	- test write to Json
 	- test Read from Json array
 	- Format with Angular (index.html/data)
+	- work out existing application structure
+	- streamlime web structure
 
-
-Goal: Easy to manipulate Angular based tourism content feed
+Goal: Easy to manipulate Angular, bootstrap scaffolded tourism content feed
 
 Todo:
 	* study Casper and implement it on visitmaldives, condenast, 
@@ -23,4 +36,4 @@ Todo:
 
 Notes:
 	- Nodeunit default reporter has an issue in Windows
-
+	- need to set up integrating machine with browser tests

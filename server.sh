@@ -1,1 +1,1 @@
-node src/server/_server_test.js
+node src/server/spike_servefile.js

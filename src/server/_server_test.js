@@ -23,19 +23,16 @@ exports.testHttpServer = function(test){
 
  	response.on("data", function(chunk) {
  		receivedData = true;
- 		test.equals("Hello World", chunk, "response text"); 
+ 		test.equals("Hello World", chunk, "response text");
+ 		
+ 	response.on("end", function(){
+ 		test.ok(receivedData, "Should have received some data");
  		test.done();	
+ 	});
 
  	response.on('error', function(e) {
 		console.log("You broke the internet.404 on Test Server" + e.message);
 			});
 		});
 	 });
-};
-
-exports.test_stopCalledWhenServerIsntRunning = function(test){
-	test.throws(function (){
-		throw new Error("Server already stopped");
-	}, Error);
-	test.done();
 };
